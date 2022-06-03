@@ -38,7 +38,7 @@ function UpdateStudent() {
 
     axios
       .put(
-        "http://localhost:5000/rpmt/students/update/" + paramID.id,
+        "http://localhost:3000/rpmt/students/update/" + paramID.id,
         newStudent
       )
       .then((res) => {
@@ -63,7 +63,7 @@ function UpdateStudent() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/rpmt/students/get/" + paramID.id)
+      .get("http://localhost:3000/rpmt/students/get/" + paramID.id)
       .then((res) => {
         console.log(res.data);
         setStudentName(res.data.student.name);

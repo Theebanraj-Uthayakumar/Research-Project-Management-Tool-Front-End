@@ -29,13 +29,13 @@ function ViewStaff() {
 
   const deletestaff = async (id, idNumber) => {
     await axios
-      .delete("http://localhost:5000/rpmt/staff/delete/" + id)
+      .delete("http://localhost:3000/rpmt/staff/delete/" + id)
       .then((res) => {
         console.log(res);
       });
 
     await axios
-      .delete("http://localhost:5000/rpmt/users/deleteByUserID/" + idNumber)
+      .delete("http://localhost:3000/rpmt/users/deleteByUserID/" + idNumber)
       .then((res) => {
         console.log(res);
       });
@@ -44,7 +44,7 @@ function ViewStaff() {
 
   const loadStaffData = () => {
     axios
-      .get("http://localhost:5000/rpmt/staff/")
+      .get("http://localhost:3000/rpmt/staff/")
       .then((res) => {
         setStaff(res.data);
         console.log(res);
@@ -59,7 +59,7 @@ function ViewStaff() {
   useEffect(() => {
     function getStaff() {
       axios
-        .get("http://localhost:5000/rpmt/staff/")
+        .get("http://localhost:3000/rpmt/staff/")
         .then((res) => {
           setStaff(res.data);
           console.log(res);

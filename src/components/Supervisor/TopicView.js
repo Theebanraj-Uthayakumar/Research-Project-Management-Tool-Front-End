@@ -20,7 +20,7 @@ function viewTopics() {
   React.useEffect(() => {
     function getTopics() {
       axios
-        .get("http://localhost:5000/rpmt/topics/")
+        .get("http://localhost:3000/rpmt/topics/")
         .then((res) => {
           setTopics(res.data);
           console.log(res);
@@ -33,7 +33,7 @@ function viewTopics() {
   }, []);
   function getAllTopics() {
     axios
-      .get("http://localhost:5000/rpmt/topics/")
+      .get("http://localhost:3000/rpmt/topics/")
       .then((res) => {
         setTopics(res.data);
         console.log(res);
@@ -55,7 +55,7 @@ function viewTopics() {
     // };
     console.log(topic);
     axios
-      .post("http://localhost:5000/rpmt/acceptedTopics/add", topic)
+      .post("http://localhost:3000/rpmt/acceptedTopics/add", topic)
       .then((res) => {
         alert("Topic Accepted");
         console.log(res);
@@ -65,7 +65,7 @@ function viewTopics() {
       });
 
     axios
-      .delete("http://localhost:5000/rpmt/topics/delete/" + topic._id)
+      .delete("http://localhost:3000/rpmt/topics/delete/" + topic._id)
       .then((res) => {
         // alert("Topic Deleted");
         getAllTopics();
@@ -80,7 +80,7 @@ function viewTopics() {
     console.log("Start Rejecting");
     console.log(topic);
     axios
-      .post("http://localhost:5000/rpmt/rejectedTopics/add", topic)
+      .post("http://localhost:3000/rpmt/rejectedTopics/add", topic)
       .then((res) => {
         // alert("Topic Rejected");
         console.log(res);
@@ -90,7 +90,7 @@ function viewTopics() {
       });
 
     axios
-      .delete("http://localhost:5000/rpmt/topics/delete/" + topic._id)
+      .delete("http://localhost:3000/rpmt/topics/delete/" + topic._id)
       .then((res) => {
         alert("Topic Deleted");
         getAllTopics();

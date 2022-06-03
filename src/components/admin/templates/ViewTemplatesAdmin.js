@@ -40,7 +40,7 @@ function ViewTemplates() {
   const deleteTemplate = (id) => {
     setOpen(false);
     axios
-      .delete("http://localhost:5000/rpmt/templates/delete/" + id)
+      .delete("http://localhost:3000/rpmt/templates/delete/" + id)
       .then(() => {
         getAllTemplates();
       });
@@ -48,7 +48,7 @@ function ViewTemplates() {
   useEffect(() => {
     function getTemplates() {
       axios
-        .get("http://localhost:5000/rpmt/templates/")
+        .get("http://localhost:3000/rpmt/templates/")
         .then((res) => {
           setTemplates(res.data);
           console.log(res);
@@ -62,7 +62,7 @@ function ViewTemplates() {
 
   function getAllTemplates() {
     axios
-      .get("http://localhost:5000/rpmt/templates/")
+      .get("http://localhost:3000/rpmt/templates/")
       .then((res) => {
         setTemplates(res.data);
         console.log(res);

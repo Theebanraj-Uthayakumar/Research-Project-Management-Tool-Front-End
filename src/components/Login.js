@@ -30,7 +30,7 @@ function Login() {
     };
 
     const response = await axios.post(
-      "http://localhost:5000/rpmt/users/login",
+      "http://localhost:3000/rpmt/users/login",
       loginData
     );
 
@@ -80,7 +80,7 @@ function Login() {
       <ResponsiveAppBarLogin />
       <Container sx={{ mt: 15 }}>
         <center>
-          <Card sx={{ minWidth: 400, m: 5, p: 2, maxWidth: 500 }} raised>
+        <Card sx={{ minWidth: 400, m: 5, p: 2, maxWidth: 500 }} raised>
             <CardContent>
               <form onSubmit={loginUser}>
                 <CssBaseline />
@@ -130,6 +130,7 @@ function Login() {
                       fullWidth
                       variant="contained"
                       sx={{ mt: 3, mb: 2 }}
+                      style={{ background: "#343a40" }}
                     >
                       Sign In
                     </Button>
@@ -142,35 +143,30 @@ function Login() {
                         spacing={2}
                         sx={{ mx: 10 }}
                       >
-                        <Link href="registerStudent" variant="body2">
-                          Register as a Student
-                        </Link>
-                        {/* </Grid> */}
-                        {/* <Grid item> */}
-                        <Link href="registerStaff" variant="body2">
-                          Register as a Staff
-                        </Link>
                         {/* </Grid> */}
                       </Stack>
                     </Grid>
                   </Box>
                 </Box>
+                </form>
+                    <Link href="registerStudent" variant="body2"><Button
+                      fullWidth
+                      variant="contained"
+                      sx={{ mt: 1, mb: 1 }}
+                      style={{ background: "#343a40" }}
+                    >
+                       Register as a Student
+                    </Button></Link>
 
-                <br />
-                <br />
-
-                <div>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    align="center"
-                  >
-                    {"Copyright © "}
-                    {new Date().getFullYear()}
-                    {"."}
-                  </Typography>
-                </div>
-              </form>
+                    <Link href="registerStaff" variant="body2"><Button
+                      fullWidth
+                      variant="contained"
+                      sx={{ mt: 1, mb: 2 }}
+                      style={{ background: "#343a40"}}
+                    >
+                       Register as a Staff
+                    </Button>
+                </Link>
             </CardContent>
           </Card>
         </center>

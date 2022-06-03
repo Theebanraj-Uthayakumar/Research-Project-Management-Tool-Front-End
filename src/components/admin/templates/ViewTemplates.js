@@ -18,7 +18,7 @@ function ViewTemplates() {
   useEffect(() => {
     function getTemplates() {
       axios
-        .get("http://localhost:5000/rpmt/templates/")
+        .get("http://localhost:3000/rpmt/templates/")
         .then((res) => {
           setTemplates(res.data);
           console.log(res);

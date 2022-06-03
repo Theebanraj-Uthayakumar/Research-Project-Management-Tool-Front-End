@@ -59,7 +59,7 @@ function TopicRegister() {
     };
     console.log(newTopic);
     axios
-      .post("http://localhost:5000/rpmt/topics/registerTopic", newTopic)
+      .post("http://localhost:3000/rpmt/topics/registerTopic", newTopic)
       .then((res) => {
         alert("Topic Submitted");
         console.log(res);
@@ -250,7 +250,7 @@ function TopicRegister() {
                     />
                   </Box>
                   <center>
-                    <Button variant="contained" type="submit">
+                    <Button variant="contained" type="submit" style={{background: "#343a40"}}>
                       Submit
                     </Button>
                   </center>

@@ -68,7 +68,7 @@ function RegisterStaff() {
 
       axios
         .post(
-          "http://localhost:5000/rpmt/staff/registerStaffMember",
+          "http://localhost:3000/rpmt/staff/registerStaffMember",
           newStudent
         )
         .then((res) => {
@@ -83,7 +83,7 @@ function RegisterStaff() {
         });
 
       axios
-        .post("http://localhost:5000/rpmt/users/add/", newLogin)
+        .post("http://localhost:3000/rpmt/users/add/", newLogin)
         .then((res) => {
           console.log(res);
           console.log("Staff Login Added!!");

@@ -35,7 +35,7 @@ export default function EditGroup() {
     e.preventDefault();
 
     axios
-      .put("http://localhost:5000/rpmt/group/update/" + paramID.id, groupData)
+      .put("http://localhost:3000/rpmt/group/update/" + paramID.id, groupData)
       .then((res) => {
         console.log(res);
         console.log("Group Updated!!");
@@ -70,7 +70,7 @@ export default function EditGroup() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/rpmt/group/get/" + paramID.id)
+      .get("http://localhost:3000/rpmt/group/get/" + paramID.id)
       .then((res) => {
         console.log(res);
         setCurrentGroup(res.data);

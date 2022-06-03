@@ -45,7 +45,7 @@ function RegisterStudent() {
       };
 
       axios
-        .post("http://localhost:5000/rpmt/students/registerStudent", newStudent)
+        .post("http://localhost:3000/rpmt/students/registerStudent", newStudent)
         .then((res) => {
           console.log(res);
           console.log("Student Added!!");
@@ -58,7 +58,7 @@ function RegisterStudent() {
         });
 
       axios
-        .post("http://localhost:5000/rpmt/users/add/", newLogin)
+        .post("http://localhost:3000/rpmt/users/add/", newLogin)
         .then((res) => {
           console.log(res);
           console.log("Student Login Added!!");
@@ -183,8 +183,8 @@ function RegisterStudent() {
                   <Button
                     type="submit"
                     variant="contained"
-                    color="primary"
                     disabled={loading}
+                    style={{ background: "#343a40"}}
                   >
                     Register
                   </Button>

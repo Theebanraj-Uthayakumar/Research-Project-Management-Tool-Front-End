@@ -64,7 +64,7 @@ function UpdateStaff() {
     const userID = idNumber;
 
     axios
-      .put("http://localhost:5000/rpmt/staff/update/" + paramID.id, newStaff)
+      .put("http://localhost:3000/rpmt/staff/update/" + paramID.id, newStaff)
       .then((res) => {
         console.log(res);
         console.log("Staff Member Updated!!");
@@ -88,7 +88,7 @@ function UpdateStaff() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/rpmt/staff/get/" + paramID.id)
+      .get("http://localhost:3000/rpmt/staff/get/" + paramID.id)
       .then((res) => {
         console.log(res.data);
         setName(res.data.staff.name);

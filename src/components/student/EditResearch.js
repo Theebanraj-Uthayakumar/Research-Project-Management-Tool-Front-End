@@ -43,7 +43,7 @@ function EditResearch() {
     e.preventDefault();
 
     axios
-      .put("http://localhost:5000/rpmt/research/update/" + paramID.id, formData)
+      .put("http://localhost:3000/rpmt/research/update/" + paramID.id, formData)
       .then((res) => {
         console.log(res);
         console.log("Research Updated!!");
@@ -68,7 +68,7 @@ function EditResearch() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/rpmt/research/get/" + paramID.id)
+      .get("http://localhost:3000/rpmt/research/get/" + paramID.id)
       .then((res) => {
         setCurrentResearch(res.data);
         console.log(res);

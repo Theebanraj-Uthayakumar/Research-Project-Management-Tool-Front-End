@@ -33,7 +33,7 @@ function AddTemplate() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/rpmt/templates/add/", formData)
+      .post("http://localhost:3000/rpmt/templates/add/", formData)
       .then((res) => {
         console.log(res);
         console.log("Template Added!!");

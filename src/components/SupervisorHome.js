@@ -38,21 +38,20 @@ function SupervisorHome() {
               <center>
                 <Avatar
                   alt="Item Image"
-                  src={require("./admin/images/topics.png")}
+                  src={require("./admin/images/registedTopic.jpg")}
                   sx={{ width: 150, height: 150 }}
                 />
               </center>
-              <CardContent>
+              <CardContent style={{background: "#343a40" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
-                  style={{ fontWeight: 500, color: "#A3A3A3" }}
+                  style={{ fontWeight: 500, color: "#fff" }}
                 >
                   View Registered Topics
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  View All Registered topics .
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -70,22 +69,21 @@ function SupervisorHome() {
               <center>
                 <Avatar
                   alt="Item Image"
-                  src={require("./admin/images/researchIcon.png")}
+                  src={require("./admin/images/research1.jpg")}
                   sx={{ width: 150, height: 150 }}
                 />
               </center>
-              <CardContent>
+              <CardContent style={{background: "#343a40" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
-                  style={{ fontWeight: 500, color: "#A3A3A3" }}
+                  style={{ fontWeight: 500, color: "#fff" }}
                 >
                   View Research
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  View All researches, delete researches and update research
-                  details.
+                 
                 </Typography>
               </CardContent>
             </CardActionArea>

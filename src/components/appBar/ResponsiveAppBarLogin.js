@@ -46,7 +46,7 @@ function ResponsiveAppBarLogin() {
   };
 
   return (
-    <AppBar position="fixed" style={{ background: "#0E3F65" }}>
+    <AppBar position="fixed" style={{ background: "#343a40" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -55,7 +55,7 @@ function ResponsiveAppBarLogin() {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            Research Project Management Tool
+            RPMT
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

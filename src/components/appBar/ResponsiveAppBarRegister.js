@@ -50,7 +50,7 @@ function ResponsiveAppBarRegister() {
   };
 
   return (
-    <AppBar position="fixed" style={{ background: "#0E3F65" }}>
+    <AppBar position="fixed" style={{ background: "#343a40" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -109,7 +109,7 @@ function ResponsiveAppBarRegister() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            Research Project Management Tool
+            RPMT
           </Typography>
           <Box
             sx={{

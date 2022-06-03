@@ -32,7 +32,7 @@ function AddGroup() {
     console.log(newGroup);
 
     axios
-      .post("http://localhost:5000/rpmt/group/add/", newGroup)
+      .post("http://localhost:3000/rpmt/group/add/", newGroup)
       .then((res) => {
         console.log(res);
         console.log("Group Added!!");
@@ -67,7 +67,7 @@ function AddGroup() {
 
   return (
     <div>
-      <Container>
+      <Container style={{height: 20, width: 600}}>
         <Paper elevation={7}>
           <Box sx={{ m: 5 }}>
             <br />
@@ -134,8 +134,9 @@ function AddGroup() {
                   variant="contained"
                   color="primary"
                   type="submit"
+                  fullWidth
                   disabled={loading}
-                  style={{ marginTop: "10px" }}
+                  style={{ marginTop: "10px",background: "#343a40" }}
                 >
                   Add Group Details
                 </Button>

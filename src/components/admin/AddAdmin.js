@@ -34,7 +34,7 @@ function AddAdmin() {
       };
 
       axios
-        .post("http://localhost:5000/rpmt/users/add/", newLogin)
+        .post("http://localhost:3000/rpmt/users/add/", newLogin)
         .then((res) => {
           console.log(res);
           console.log("Admin Login Added!!");

@@ -59,9 +59,9 @@ function AddResearch() {
 
   return (
     <div>
-      <Container>
+      <Container style={{height: 20, width: 600}}>
         <Paper elevation={7}>
-          <Box sx={{ m: 5 }}>
+          <Box sx={{ m: 5 }} >
             <br />
             <h2>Add Research</h2>
             <br />
@@ -140,8 +140,10 @@ function AddResearch() {
                   variant="contained"
                   color="primary"
                   type="submit"
+                  fullWidth
                   disabled={loading}
-                  style={{ marginTop: "10px" }}
+                  style={{ marginTop: "10px",background: "#343a40"}}
+
                 >
                   Add Research Document
                 </Button>

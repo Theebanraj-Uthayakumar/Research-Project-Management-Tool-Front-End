@@ -69,22 +69,21 @@ function StudentHome() {
               <center>
                 <Avatar
                   alt="Item Image"
-                  src={require("./images/addDoc.png")}
+                  src={require("./images/addResearch.jpg")}
                   sx={{ width: 150, height: 150 }}
                 />
               </center>
-              <CardContent>
+              <CardContent style={{background: "#343a40" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
-                  style={{ fontWeight: 500, color: "#A3A3A3" }}
+                  style={{ fontWeight: 500, color: "#fff" }}
                 >
-                  Add Research
+                 <center> Add Research</center>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, quisquam.
+                 
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -101,22 +100,21 @@ function StudentHome() {
               <center>
                 <Avatar
                   alt="Item Image"
-                  src={require("./images/lookGroup.png")}
+                  src={require("./images/addGroup.png")}
                   sx={{ width: 150, height: 150 }}
                 />
               </center>
-              <CardContent>
+              <CardContent style={{background: "#343a40" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
-                  style={{ fontWeight: 500, color: "#A3A3A3" }}
+                  style={{ fontWeight: 500, color: "#fff" }}
                 >
-                  Add Group
+                  <center>Add Group</center>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, quisquam.
+                 
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -133,22 +131,21 @@ function StudentHome() {
               <center>
                 <Avatar
                   alt="Item Image"
-                  src={require("./images/groupIcon.png")}
+                  src={require("./images/viewGroup.jpg")}
                   sx={{ width: 150, height: 150 }}
                 />
               </center>
-              <CardContent>
+              <CardContent style={{background: "#343a40" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
-                  style={{ fontWeight: 500, color: "#A3A3A3" }}
+                  style={{ fontWeight: 500, color: "#fff" }}
                 >
-                  View Group
+                  <center>View Group</center>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, quisquam.
+                 
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -165,22 +162,21 @@ function StudentHome() {
               <center>
                 <Avatar
                   alt="Item Image"
-                  src={require("./images/tempIcon.png")}
+                  src={require("./images/viewTemplate.png")}
                   sx={{ width: 150, height: 150 }}
                 />
               </center>
-              <CardContent>
+              <CardContent style={{background: "#343a40" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
-                  style={{ fontWeight: 500, color: "#A3A3A3" }}
+                  style={{ fontWeight: 500, color: "#fff" }}
                 >
-                  View Template
+                 <center> View Template</center>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, quisquam.
+                
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -197,22 +193,21 @@ function StudentHome() {
               <center>
                 <Avatar
                   alt="Item Image"
-                  src={require("./images/topicIcon.png")}
+                  src={require("./images/viewTopics.webp")}
                   sx={{ width: 150, height: 150 }}
                 />
               </center>
-              <CardContent>
+              <CardContent style={{background: "#343a40" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
-                  style={{ fontWeight: 500, color: "#A3A3A3" }}
+                  style={{ fontWeight: 500, color: "#fff" }}
                 >
-                  View Topics
+                  <center>View Topics</center>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, quisquam.
+                
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -235,22 +230,21 @@ function StudentHome() {
               <center>
                 <Avatar
                   alt="Item Image"
-                  src={require("./images/topicReg.png")}
+                  src={require("./images/registerTopic.jpg")}
                   sx={{ width: 150, height: 150 }}
                 />
               </center>
-              <CardContent>
+              <CardContent style={{background: "#343a40" }}>
                 <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
-                  style={{ fontWeight: 500, color: "#A3A3A3" }}
+                  style={{ fontWeight: 500, color: "#fff" }}
                 >
-                  Register Topic
+                <center>  Register Topic</center>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate, quisquam.
+                
                 </Typography>
               </CardContent>
             </CardActionArea>

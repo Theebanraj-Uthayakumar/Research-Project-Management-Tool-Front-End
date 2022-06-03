@@ -49,7 +49,7 @@ export default function ViewResearch() {
   const deleteResearch = (id) => {
     setOpen(false);
     axios
-      .delete("http://localhost:5000/rpmt/research/delete/" + id)
+      .delete("http://localhost:3000/rpmt/research/delete/" + id)
       .then(() => {
         window.location.reload(false);
       });
@@ -57,7 +57,7 @@ export default function ViewResearch() {
   useEffect(() => {
     function getResearch() {
       axios
-        .get("http://localhost:5000/rpmt/research/")
+        .get("http://localhost:3000/rpmt/research/")
         .then((res) => {
           setResearch(res.data);
           console.log(res);
@@ -80,6 +80,7 @@ export default function ViewResearch() {
                 color="primary"
                 onClick={addResearch}
                 startIcon={<AddIcon />}
+                style={{ background: "#343a40" }}
               >
                 Add Research
               </Button>

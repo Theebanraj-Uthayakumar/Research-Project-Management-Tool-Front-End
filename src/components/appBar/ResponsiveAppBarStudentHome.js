@@ -53,7 +53,7 @@ const ResponsiveStudentHome = () => {
   };
 
   return (
-    <AppBar position="fixed" style={{ background: "#0E3F65" }}>
+    <AppBar position="fixed" style={{ background: "#343a40" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -62,7 +62,7 @@ const ResponsiveStudentHome = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" }, fontWeight: 700 }}
           >
-            Research Project Management Tool
+            RPMT
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

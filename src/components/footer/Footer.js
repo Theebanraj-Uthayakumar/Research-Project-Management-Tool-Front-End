@@ -3,12 +3,12 @@ function Footer() {
     <div>
       <center>
         <footer>
-          {"Copyright © "}
+          {/* {"Copyright © "}
           {new Date().getFullYear()}
           {"."}
           <p>
             <a href="#">SE Y3S1 @ SLIIT</a>
-          </p>
+          </p> */}
         </footer>
       </center>
     </div>

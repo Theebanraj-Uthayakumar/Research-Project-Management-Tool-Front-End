@@ -29,7 +29,7 @@ function Status() {
 
   //   const loadAcceptedTopics = () => {
   //     axios
-  //       .get("http://localhost:5000/rpmt/acceptedTopics/")
+  //       .get("http://localhost:3000/rpmt/acceptedTopics/")
   //       .then((res) => {
   //         setAcceptedTopics(res.data);
   //         console.log(res);
@@ -44,7 +44,7 @@ function Status() {
   useEffect(() => {
     function getAcceptedTopics() {
       axios
-        .get("http://localhost:5000/rpmt/acceptedTopics")
+        .get("http://localhost:3000/rpmt/acceptedTopics")
         .then((res) => {
           setAcceptedTopics(res.data);
           console.log(res);
@@ -61,7 +61,7 @@ function Status() {
 
   //   const loadRejectedTopics = () => {
   //     axios
-  //       .get("http://localhost:5000/rpmt/rejectedTopic/")
+  //       .get("http://localhost:3000/rpmt/rejectedTopic/")
   //       .then((res) => {
   //         setRejectedTopics(res.data);
   //         console.log(res);
@@ -77,7 +77,7 @@ function Status() {
   useEffect(() => {
     function getRejectedTopics() {
       axios
-        .get("http://localhost:5000/rpmt/rejectedTopics")
+        .get("http://localhost:3000/rpmt/rejectedTopics")
         .then((res) => {
           setRejectedTopics(res.data);
           console.log(res);

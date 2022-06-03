@@ -37,7 +37,7 @@ function UpdateTemplate() {
 
     axios
       .put(
-        "http://localhost:5000/rpmt/templates/update/" + paramID.id,
+        "http://localhost:3000/rpmt/templates/update/" + paramID.id,
         formData
       )
       .then((res) => {
@@ -61,7 +61,7 @@ function UpdateTemplate() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/rpmt/templates/get/" + paramID.id)
+      .get("http://localhost:3000/rpmt/templates/get/" + paramID.id)
       .then((res) => {
         setCurrentTemplate(res.data);
         console.log(res);
