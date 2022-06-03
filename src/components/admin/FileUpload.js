@@ -38,9 +38,9 @@ function FileUpload() {
       <center>
         <h1>Upload Template</h1>
         <TextField
-          id="outlined-basic"
+          id="filled-hidden-label-normal"
           label="Type"
-          variant="outlined"
+          variant="filled"
           required
           onChange={(e) => {
             setType(e.target.value);
@@ -51,9 +51,9 @@ function FileUpload() {
         <br />
 
         <TextField
-          id="outlined-basic"
+          id="filled-hidden-label-normal"
           label="Title"
-          variant="outlined"
+          variant="filled"
           required
           onChange={(e) => {
             setDescription(e.target.value);
@@ -63,9 +63,9 @@ function FileUpload() {
         <br />
 
         <TextField
-          id="outlined-basic"
+          id="filled-hidden-label-normal"
           label="Title"
-          variant="outlined"
+          variant="filled"
           required
           onChange={(e) => {
             setTitle(e.target.value);

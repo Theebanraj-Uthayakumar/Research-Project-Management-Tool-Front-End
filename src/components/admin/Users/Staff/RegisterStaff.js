@@ -133,9 +133,9 @@ function RegisterStaff() {
               >
                 <Grid item md={6}></Grid>
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Staff Member Name"
-                  variant="outlined"
+                  variant="filled"
                   value={name}
                   required
                   fullWidth
@@ -146,7 +146,7 @@ function RegisterStaff() {
                 <br />
                 <br />
                 <TextField
-                  variant="outlined"
+                  variant="filled"
                   label="Staff Member ID"
                   value={idNumber}
                   required
@@ -242,7 +242,7 @@ function RegisterStaff() {
                 <br />
                 <br />
                 <TextField
-                  variant="outlined"
+                  variant="filled"
                   label="Research Interest"
                   value={researchInterest}
                   required
@@ -254,7 +254,7 @@ function RegisterStaff() {
                 <br />
                 <br />
                 <TextField
-                  variant="outlined"
+                  variant="filled"
                   label="Password"
                   type="password"
                   value={password}
@@ -268,7 +268,7 @@ function RegisterStaff() {
                 <br />
                 <br />
                 <TextField
-                  variant="outlined"
+                  variant="filled"
                   label="Confirm Password"
                   type="password"
                   value={confirmPassword}

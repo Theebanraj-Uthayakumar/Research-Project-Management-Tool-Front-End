@@ -99,7 +99,7 @@ export default function EditGroup() {
                 </Grid>
                 <TextField
                   label="Leader"
-                  variant="outlined"
+                  variant="filled"
                   value={leader}
                   required
                   fullWidth
@@ -111,7 +111,7 @@ export default function EditGroup() {
                 <br />
                 <TextField
                   label="Member 1 Name"
-                  variant="outlined"
+                  variant="filled"
                   value={member1}
                   required
                   fullWidth
@@ -123,7 +123,7 @@ export default function EditGroup() {
                 <br />
                 <TextField
                   label="Member 2 Name"
-                  variant="outlined"
+                  variant="filled"
                   value={member2}
                   required
                   fullWidth
@@ -135,7 +135,7 @@ export default function EditGroup() {
                 <br />
                 <TextField
                   label="Member 3 Name"
-                  variant="outlined"
+                  variant="filled"
                   value={member3}
                   required
                   fullWidth

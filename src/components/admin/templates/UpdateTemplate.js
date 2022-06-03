@@ -107,9 +107,9 @@ function UpdateTemplate() {
                   <br />
                 </Grid>
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Title"
-                  variant="outlined"
+                  variant="filled"
                   value={title}
                   required
                   fullWidth
@@ -121,7 +121,7 @@ function UpdateTemplate() {
                 <br />
                 <TextField
                   multiline
-                  variant="outlined"
+                  variant="filled"
                   label="Description"
                   value={description}
                   required

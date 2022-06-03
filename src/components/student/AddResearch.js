@@ -75,9 +75,9 @@ function AddResearch() {
                 <br />
                 <br />
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Name"
-                  variant="outlined"
+                  variant="filled"
                   value={name}
                   required
                   fullWidth
@@ -88,9 +88,9 @@ function AddResearch() {
                 <br />
                 <br />
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Topic"
-                  variant="outlined"
+                  variant="filled"
                   value={topic}
                   required
                   fullWidth
@@ -101,9 +101,9 @@ function AddResearch() {
                 <br />
                 <br />
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Group ID"
-                  variant="outlined"
+                  variant="filled"
                   value={groupID}
                   required
                   fullWidth
@@ -114,9 +114,9 @@ function AddResearch() {
                 <br />
                 <br />
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Faculty"
-                  variant="outlined"
+                  variant="filled"
                   value={faculty}
                   required
                   fullWidth

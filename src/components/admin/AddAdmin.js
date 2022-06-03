@@ -78,7 +78,7 @@ function AddAdmin() {
                 <Grid item md={6}></Grid>
                 <Box sx={{ pl: 5, pr: 5 }}>
                   <TextField
-                    variant="outlined"
+                    variant="filled"
                     label="Admin ID"
                     value={idNumber}
                     required
@@ -91,7 +91,7 @@ function AddAdmin() {
                   <br />
 
                   <TextField
-                    variant="outlined"
+                    variant="filled"
                     label="Password"
                     type="password"
                     value={password}
@@ -104,7 +104,7 @@ function AddAdmin() {
                   <br />
                   <br />
                   <TextField
-                    variant="outlined"
+                    variant="filled"
                     label="Confirm Password"
                     type="password"
                     value={confirmPassword}

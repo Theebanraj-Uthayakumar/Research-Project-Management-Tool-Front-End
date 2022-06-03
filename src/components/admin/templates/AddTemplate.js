@@ -90,9 +90,9 @@ function AddTemplate() {
               >
                 <Grid item md={6}>
                   {/* <TextField
-                    id="outlined-basic"
+                    id="filled-hidden-label-normal"
                     label="Type"
-                    variant="outlined"
+                    variant="filled"
                     value={type}
                     required
                     fullWidth
@@ -104,9 +104,9 @@ function AddTemplate() {
                   <br />
                 </Grid>
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Title"
-                  variant="outlined"
+                  variant="filled"
                   value={title}
                   required
                   fullWidth
@@ -118,7 +118,7 @@ function AddTemplate() {
                 <br />
                 <TextField
                   multiline
-                  variant="outlined"
+                  variant="filled"
                   label="Description"
                   value={description}
                   required

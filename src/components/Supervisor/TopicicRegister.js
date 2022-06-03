@@ -95,7 +95,7 @@ function TopicRegister() {
                       required
                       id="name"
                       label="Name"
-                      variant="outlined"
+                      variant="filled"
                       onChange={(e) => {
                         setName(e.target.value);
                       }}
@@ -114,7 +114,7 @@ function TopicRegister() {
                       required
                       id="registerNumber"
                       label="Register Number"
-                      variant="outlined"
+                      variant="filled"
                       onChange={(e) => {
                         setstudentId(e.target.value);
                       }}
@@ -124,7 +124,7 @@ function TopicRegister() {
                       required
                       id="groupId"
                       label="Group Id"
-                      variant="outlined"
+                      variant="filled"
                       onChange={(e) => {
                         setGroupID(e.target.value);
                       }}
@@ -243,7 +243,7 @@ function TopicRegister() {
                       required
                       id="topic"
                       label="Topic"
-                      variant="outlined"
+                      variant="filled"
                       onChange={(e) => {
                         setTopic(e.target.value);
                       }}

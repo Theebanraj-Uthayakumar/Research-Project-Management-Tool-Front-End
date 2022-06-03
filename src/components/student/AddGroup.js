@@ -79,9 +79,9 @@ function AddGroup() {
                 <br />
                 <br />
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Leader Name"
-                  variant="outlined"
+                  variant="filled"
                   value={leader}
                   required
                   fullWidth
@@ -92,9 +92,9 @@ function AddGroup() {
                 <br />
                 <br />
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Member 1 Name"
-                  variant="outlined"
+                  variant="filled"
                   value={member1}
                   required
                   fullWidth
@@ -105,9 +105,9 @@ function AddGroup() {
                 <br />
                 <br />
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Member 2 Name"
-                  variant="outlined"
+                  variant="filled"
                   value={member2}
                   required
                   fullWidth
@@ -118,9 +118,9 @@ function AddGroup() {
                 <br />
                 <br />
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Member 3 Name"
-                  variant="outlined"
+                  variant="filled"
                   value={member3}
                   required
                   fullWidth

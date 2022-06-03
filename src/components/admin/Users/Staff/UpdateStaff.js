@@ -121,9 +121,9 @@ function UpdateStaff() {
               >
                 <Grid item md={6}></Grid>
                 <TextField
-                  id="outlined-basic"
+                  id="filled-hidden-label-normal"
                   label="Staff Member Name"
-                  variant="outlined"
+                  variant="filled"
                   value={name}
                   required
                   fullWidth
@@ -134,7 +134,7 @@ function UpdateStaff() {
                 <br />
                 <br />
                 <TextField
-                  variant="outlined"
+                  variant="filled"
                   label="Staff Member ID"
                   value={idNumber}
                   required
@@ -212,7 +212,7 @@ function UpdateStaff() {
                 <br />
 
                 <TextField
-                  variant="outlined"
+                  variant="filled"
                   label="Research Interest"
                   value={researchInterest}
                   required

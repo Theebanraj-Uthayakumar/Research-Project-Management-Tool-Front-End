@@ -104,7 +104,7 @@ function EditResearch() {
                 </Grid>
                 <TextField
                   label="Name"
-                  variant="outlined"
+                  variant="filled"
                   value={name}
                   required
                   fullWidth
@@ -116,7 +116,7 @@ function EditResearch() {
                 <br />
                 <TextField
                   label="Topic"
-                  variant="outlined"
+                  variant="filled"
                   value={topic}
                   required
                   fullWidth
@@ -128,7 +128,7 @@ function EditResearch() {
                 <br />
                 <TextField
                   label="Group ID"
-                  variant="outlined"
+                  variant="filled"
                   value={groupID}
                   required
                   fullWidth
@@ -140,7 +140,7 @@ function EditResearch() {
                 <br />
                 <TextField
                   label="Faculty"
-                  variant="outlined"
+                  variant="filled"
                   value={faculty}
                   required
                   fullWidth

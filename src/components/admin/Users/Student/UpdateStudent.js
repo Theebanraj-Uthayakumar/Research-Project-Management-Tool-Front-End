@@ -91,9 +91,9 @@ function UpdateStudent() {
                 <Grid item md={6}></Grid>
                 <Box sx={{ pl: 5, pr: 5 }}>
                   <TextField
-                    id="outlined-basic"
+                    id="filled-hidden-label-normal"
                     label="Student Name"
-                    variant="outlined"
+                    variant="filled"
                     value={name}
                     required
                     fullWidth
@@ -104,7 +104,7 @@ function UpdateStudent() {
                   <br />
                   <br />
                   <TextField
-                    variant="outlined"
+                    variant="filled"
                     label="Student ID"
                     value={idNumber}
                     required
@@ -116,7 +116,7 @@ function UpdateStudent() {
                   <br />
                   <br />
                   <TextField
-                    variant="outlined"
+                    variant="filled"
                     label="Degree"
                     value={degree}
                     required
@@ -128,7 +128,7 @@ function UpdateStudent() {
                   <br />
                   <br />
                   <TextField
-                    variant="outlined"
+                    variant="filled"
                     label="Specialization"
                     value={specialization}
                     required
