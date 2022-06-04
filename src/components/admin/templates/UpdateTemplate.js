@@ -146,6 +146,7 @@ function UpdateTemplate() {
                   variant="contained"
                   color="warning"
                   disabled={loading}
+                  style={{ background: "#343a40" }}
                 >
                   Update Template/Document
                 </Button>

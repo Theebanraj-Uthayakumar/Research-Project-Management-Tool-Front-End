@@ -120,6 +120,7 @@ function AddAdmin() {
                     type="submit"
                     variant="contained"
                     color="primary"
+                    style={{ background: "#343a40" }}
                     disabled={loading}
                   >
                     Register

@@ -77,7 +77,7 @@ function ViewTemplates() {
           Templates and Documents for Researches - Admin
         </Typography>
         <Grid justifyContent="flex-start">
-          <Button variant="contained" onClick={addTemplates}>
+          <Button variant="contained" onClick={addTemplates} style={{ background: "#343a40" }}>
             Add Template/Document
           </Button>
         </Grid>
@@ -101,7 +101,7 @@ function ViewTemplates() {
                   <Grid container justifyContent="flex-end">
                     <Stack direction="row" spacing={5}>
                       <Link to={"update/" + template._id}>
-                        <IconButton aria-label="edit" color="warning">
+                        <IconButton aria-label="edit" color="warning" style={{ background: "#343a40" }}>
                           <EditIcon />
                         </IconButton>
                       </Link>
@@ -111,6 +111,7 @@ function ViewTemplates() {
                         onClick={() => {
                           handleClickOpen(template._id);
                         }}
+                        style={{ background: "#343a40" }}
                       >
                         <DeleteIcon />
                       </IconButton>

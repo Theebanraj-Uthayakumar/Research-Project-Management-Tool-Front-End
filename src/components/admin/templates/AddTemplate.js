@@ -143,6 +143,7 @@ function AddTemplate() {
                   variant="contained"
                   color="primary"
                   disabled={loading}
+                  style={{ background: "#343a40" }}
                 >
                   Add Template/Document
                 </Button>
