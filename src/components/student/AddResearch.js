@@ -6,6 +6,7 @@ import Loader from "../admin/loader/Loader";
 import Typography from "@mui/material/Typography";
 import Input from "@mui/material/Input";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function AddResearch() {
   const [loading, setLoading] = useState(false);
@@ -14,12 +15,10 @@ function AddResearch() {
   const [groupID, setGroupID] = useState("");
   const [faculty, setFaculty] = useState("");
   const [documentName, setDocumentName] = useState("");
-  const [showText, setShowText] = useState(false);
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    setShowText(false);
     setLoading(true);
     const formData = new FormData();
     var form = document.getElementById("form");
@@ -34,10 +33,14 @@ function AddResearch() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/rpmt/research/add/", formData)
+      .post("http://localhost:3000/rpmt/research/add/", formData)
       .then((res) => {
         console.log(res);
-        console.log("Research Added!!");
+        Swal.fire(
+          "Registration Succesfull!",
+          "Click ok to Continue",
+          "success"
+        );
 
         setName("");
         setTopic("");
@@ -46,25 +49,19 @@ function AddResearch() {
         setDocumentName("");
         form.reset();
         setLoading(false);
-        setShowText(true);
       })
       .catch((err) => {
         alert(err);
       });
-
-    setTimeout(() => {
-      navigate("/student");
-    }, 5000);
   };
 
   return (
     <div>
-      <Container style={{height: 20, width: 600}}>
+      <Container style={{ width: 600 }}>
         <Paper elevation={7}>
-          <Box sx={{ m: 5 }} >
+          <Box sx={{ m: 5 }}>
             <br />
             <h2>Add Research</h2>
-            <br />
 
             <Grid>
               <form
@@ -73,11 +70,10 @@ function AddResearch() {
                 encType="multipart/form-data"
               >
                 <br />
-                <br />
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Name"
-                  variant="filled"
+                  variant="standard"
                   value={name}
                   required
                   fullWidth
@@ -90,7 +86,7 @@ function AddResearch() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Topic"
-                  variant="filled"
+                  variant="standard"
                   value={topic}
                   required
                   fullWidth
@@ -103,7 +99,7 @@ function AddResearch() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Group ID"
-                  variant="filled"
+                  variant="standard"
                   value={groupID}
                   required
                   fullWidth
@@ -116,7 +112,7 @@ function AddResearch() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Faculty"
-                  variant="filled"
+                  variant="standard"
                   value={faculty}
                   required
                   fullWidth
@@ -142,17 +138,10 @@ function AddResearch() {
                   type="submit"
                   fullWidth
                   disabled={loading}
-                  style={{ marginTop: "10px",background: "#343a40"}}
-
+                  style={{ marginTop: "10px", background: "#343a40" }}
                 >
                   Add Research Document
                 </Button>
-                {showText ? (
-                  <Typography variant="subtitle1" color="#00e676">
-                    Document Added
-                  </Typography>
-                ) : null}
-                {loading ? <Loader /> : null}
                 <br />
                 <br />
               </form>

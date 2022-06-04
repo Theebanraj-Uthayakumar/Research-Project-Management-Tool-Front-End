@@ -6,7 +6,6 @@ import Loader from "../../loader/Loader";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import ResponsiveAdminSubStd from "../../../appBar/ResponsiveAdminSubStd";
 
 function UpdateStudent() {
   const [loading, setLoading] = useState(false);
@@ -79,7 +78,6 @@ function UpdateStudent() {
 
   return (
     <div>
-      <ResponsiveAdminSubStd />
       <Container>
         <Paper elevation={7}>
           <Box sx={{ m: 4 }}>
@@ -93,7 +91,7 @@ function UpdateStudent() {
                   <TextField
                     id="filled-hidden-label-normal"
                     label="Student Name"
-                    variant="filled"
+                    variant="standard"
                     value={name}
                     required
                     fullWidth
@@ -104,7 +102,7 @@ function UpdateStudent() {
                   <br />
                   <br />
                   <TextField
-                    variant="filled"
+                    variant="standard"
                     label="Student ID"
                     value={idNumber}
                     required
@@ -116,7 +114,7 @@ function UpdateStudent() {
                   <br />
                   <br />
                   <TextField
-                    variant="filled"
+                    variant="standard"
                     label="Degree"
                     value={degree}
                     required
@@ -128,7 +126,7 @@ function UpdateStudent() {
                   <br />
                   <br />
                   <TextField
-                    variant="filled"
+                    variant="standard"
                     label="Specialization"
                     value={specialization}
                     required

@@ -1,18 +1,11 @@
 import { useParams } from "react-router-dom";
-import {
-  Button,
-  Container,
-  Grid,
-  Paper,
-  TextField,
-} from "@mui/material";
+import { Button, Container, Grid, Paper, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Loader from "../admin/loader/Loader";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
-import ResponsiveStudentUpdateResearch from "../appBar/ResponsiveAppBarStudentUpdateResearch";
 
 function EditResearch() {
   const paramID = useParams("");
@@ -84,7 +77,6 @@ function EditResearch() {
 
   return (
     <div>
-      <ResponsiveStudentUpdateResearch />
       <Container sx={{ mt: 15 }}>
         <Paper elevation={7}>
           <Box sx={{ m: 5 }}>
@@ -104,7 +96,7 @@ function EditResearch() {
                 </Grid>
                 <TextField
                   label="Name"
-                  variant="filled"
+                  variant="standard"
                   value={name}
                   required
                   fullWidth
@@ -116,7 +108,7 @@ function EditResearch() {
                 <br />
                 <TextField
                   label="Topic"
-                  variant="filled"
+                  variant="standard"
                   value={topic}
                   required
                   fullWidth
@@ -128,7 +120,7 @@ function EditResearch() {
                 <br />
                 <TextField
                   label="Group ID"
-                  variant="filled"
+                  variant="standard"
                   value={groupID}
                   required
                   fullWidth
@@ -140,7 +132,7 @@ function EditResearch() {
                 <br />
                 <TextField
                   label="Faculty"
-                  variant="filled"
+                  variant="standard"
                   value={faculty}
                   required
                   fullWidth

@@ -8,7 +8,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import ResponsiveStudentHome from "../../appBar/ResponsiveAppBarStudentHome";
 
 function ViewTemplates() {
   const navigate = useNavigate();
@@ -31,7 +30,6 @@ function ViewTemplates() {
   }, []);
   return (
     <div>
-      <ResponsiveStudentHome />
       <Container sx={{ mt: 10, p: 2 }}>
         <Typography variant="h4" component="div" gutterBottom>
           Templates and Documents for Researches

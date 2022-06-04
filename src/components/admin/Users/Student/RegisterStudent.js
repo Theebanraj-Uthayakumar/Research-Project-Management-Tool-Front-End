@@ -6,7 +6,6 @@ import Loader from "../../loader/Loader";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import ResponsiveAppBarRegister from "../../../appBar/ResponsiveAppBarRegister";
 
 function RegisterStudent() {
   const [loading, setLoading] = useState(false);
@@ -91,116 +90,116 @@ function RegisterStudent() {
 
   return (
     <div>
-      <ResponsiveAppBarRegister />
       <Container sx={{ mt: 15 }}>
-        <Paper elevation={7}>
-          <Box sx={{ m: 4 }}>
-            <br></br>
-            <h2>Student Registration</h2>
+        <center>
+          <Paper elevation={7} style={{ maxWidth: 500 }}>
+            <Box sx={{ m: 4 }}>
+              <br></br>
+              <h2>Student Registration</h2>
 
-            <Grid>
-              <form onSubmit={handleSubmit} id="form">
-                <Grid item md={6}></Grid>
-                <Box sx={{ pl: 5, pr: 5 }}>
-                  <TextField
-                    id="filled-hidden-label-normal"
-                    label="Student Name"
-                    variant="filled"
-                    value={name}
-                    required
-                    fullWidth
-                    onChange={(e) => {
-                      setStudentName(e.target.value);
-                    }}
-                  />
-                  <br />
-                  <br />
-                  <TextField
-                    variant="filled"
-                    label="Student ID"
-                    value={idNumber}
-                    required
-                    fullWidth
-                    onChange={(e) => {
-                      setStudentID(e.target.value);
-                    }}
-                  />
-                  <br />
-                  <br />
-                  <TextField
-                    variant="filled"
-                    label="Degree"
-                    value={degree}
-                    required
-                    fullWidth
-                    onChange={(e) => {
-                      setDegree(e.target.value);
-                    }}
-                  />
-                  <br />
-                  <br />
-                  <TextField
-                    variant="filled"
-                    label="Specialization"
-                    value={specialization}
-                    required
-                    fullWidth
-                    onChange={(e) => {
-                      setSpecialization(e.target.value);
-                    }}
-                  />
-                  <br />
-                  <br />
+              <Grid>
+                <form onSubmit={handleSubmit} id="form">
+                  <Box sx={{ pl: 5, pr: 5 }}>
+                    <TextField
+                      id="filled-hidden-label-normal"
+                      label="Student Name"
+                      variant="standard"
+                      value={name}
+                      required
+                      fullWidth
+                      onChange={(e) => {
+                        setStudentName(e.target.value);
+                      }}
+                    />
+                    <br />
+                    <br />
+                    <TextField
+                      variant="standard"
+                      label="Student ID"
+                      value={idNumber}
+                      required
+                      fullWidth
+                      onChange={(e) => {
+                        setStudentID(e.target.value);
+                      }}
+                    />
+                    <br />
+                    <br />
+                    <TextField
+                      variant="standard"
+                      label="Degree"
+                      value={degree}
+                      required
+                      fullWidth
+                      onChange={(e) => {
+                        setDegree(e.target.value);
+                      }}
+                    />
+                    <br />
+                    <br />
+                    <TextField
+                      variant="standard"
+                      label="Specialization"
+                      value={specialization}
+                      required
+                      fullWidth
+                      onChange={(e) => {
+                        setSpecialization(e.target.value);
+                      }}
+                    />
+                    <br />
+                    <br />
 
-                  <TextField
-                    variant="filled"
-                    label="Password"
-                    type="password"
-                    value={password}
-                    required
-                    fullWidth
-                    onChange={(e) => {
-                      setPassword(e.target.value);
-                    }}
-                  />
-                  <br />
-                  <br />
-                  <TextField
-                    variant="filled"
-                    label="Confirm Password"
-                    type="password"
-                    value={confirmPassword}
-                    required
-                    fullWidth
-                    onChange={(e) => {
-                      setConfirmPassword(e.target.value);
-                    }}
-                  />
+                    <TextField
+                      variant="standard"
+                      label="Password"
+                      type="password"
+                      value={password}
+                      required
+                      fullWidth
+                      onChange={(e) => {
+                        setPassword(e.target.value);
+                      }}
+                    />
+                    <br />
+                    <br />
+                    <TextField
+                      variant="standard"
+                      label="Confirm Password"
+                      type="password"
+                      value={confirmPassword}
+                      required
+                      fullWidth
+                      onChange={(e) => {
+                        setConfirmPassword(e.target.value);
+                      }}
+                    />
 
-                  <br />
-                  <br />
+                    <br />
+                    <br />
 
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    disabled={loading}
-                    style={{ background: "#343a40"}}
-                  >
-                    Register
-                  </Button>
-                  {showText ? (
-                    <Typography variant="subtitle1" color="#00e676">
-                      Registered
-                    </Typography>
-                  ) : null}
-                  {loading ? <Loader /> : null}
-                  <br />
-                  <br />
-                </Box>
-              </form>
-            </Grid>
-          </Box>
-        </Paper>
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      disabled={loading}
+                      style={{ background: "#343a40" }}
+                    >
+                      Register
+                    </Button>
+                    {showText ? (
+                      <Typography variant="subtitle1" color="#00e676">
+                        Registered
+                      </Typography>
+                    ) : null}
+                    {loading ? <Loader /> : null}
+                    <br />
+                    <br />
+                  </Box>
+                </form>
+              </Grid>
+            </Box>
+          </Paper>
+        </center>
       </Container>
     </div>
   );

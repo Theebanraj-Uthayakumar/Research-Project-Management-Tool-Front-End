@@ -11,7 +11,6 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import ResponsiveAdminSubStaff from "../../../appBar/ResponsiveAdminSubStaff";
 
 function UpdateStaff() {
   const [loading, setLoading] = useState(false);
@@ -106,7 +105,6 @@ function UpdateStaff() {
 
   return (
     <div>
-      <ResponsiveAdminSubStaff />
       <Container sx={{ mt: 15 }}>
         <Paper elevation={7}>
           <Box sx={{ m: 4 }}>
@@ -123,7 +121,7 @@ function UpdateStaff() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Staff Member Name"
-                  variant="filled"
+                  variant="standard"
                   value={name}
                   required
                   fullWidth
@@ -134,7 +132,7 @@ function UpdateStaff() {
                 <br />
                 <br />
                 <TextField
-                  variant="filled"
+                  variant="standard"
                   label="Staff Member ID"
                   value={idNumber}
                   required
@@ -212,7 +210,7 @@ function UpdateStaff() {
                 <br />
 
                 <TextField
-                  variant="filled"
+                  variant="standard"
                   label="Research Interest"
                   value={researchInterest}
                   required

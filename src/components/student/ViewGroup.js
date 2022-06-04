@@ -23,9 +23,12 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
-import ResponsiveStudentHome from "../appBar/ResponsiveAppBarStudentHome";
+
+let studentID = null;
 
 export default function ViewGroup() {
+  studentID = localStorage.getItem("userID");
+
   const navigate = useNavigate();
 
   const [group, setGroup] = useState([]);
@@ -53,15 +56,18 @@ export default function ViewGroup() {
   };
   useEffect(() => {
     function getGroup() {
-      axios.get("http://localhost:3000/rpmt/group/").then((res) => {
-        setGroup(res.data);
-      });
+      axios
+        .get(
+          `http://localhost:3000/rpmt/group/FilterGroup?studentID=${studentID}`
+        )
+        .then((res) => {
+          setGroup(res.data);
+        });
     }
     getGroup();
   }, []);
   return (
     <div>
-      <ResponsiveStudentHome />
       <Container maxWidth="lg" sx={{ mt: 15, p: 2 }}>
         <Grid container spacing={3}>
           <Grid item xs={12}>

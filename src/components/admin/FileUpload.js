@@ -40,7 +40,7 @@ function FileUpload() {
         <TextField
           id="filled-hidden-label-normal"
           label="Type"
-          variant="filled"
+          variant="standard"
           required
           onChange={(e) => {
             setType(e.target.value);
@@ -53,7 +53,7 @@ function FileUpload() {
         <TextField
           id="filled-hidden-label-normal"
           label="Title"
-          variant="filled"
+          variant="standard"
           required
           onChange={(e) => {
             setDescription(e.target.value);
@@ -65,7 +65,7 @@ function FileUpload() {
         <TextField
           id="filled-hidden-label-normal"
           label="Title"
-          variant="filled"
+          variant="standard"
           required
           onChange={(e) => {
             setTitle(e.target.value);

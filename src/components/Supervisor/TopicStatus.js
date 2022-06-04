@@ -16,8 +16,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 //import "../usersStye.css";
 import Swal from "sweetalert2";
-import ResponsiveSupervisorHome from "../appBar/ResponsiveSupervisorHome";
-//import ResponsiveAdminHome from "../../../appBar/ResponsiveAdminHome";
 
 function Status() {
   const navigate = useNavigate();
@@ -94,7 +92,6 @@ function Status() {
 
   return (
     <div>
-      <ResponsiveSupervisorHome />
       <Container sx={{ mt: 15, p: 2 }}>
         <Typography variant="h4" component="div" gutterBottom>
           Accepted Topic Details
