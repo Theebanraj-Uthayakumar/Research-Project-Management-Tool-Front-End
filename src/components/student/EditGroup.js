@@ -7,7 +7,6 @@ import Loader from "../admin/loader/Loader";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import ResponsiveStudentHome from "../appBar/ResponsiveAppBarStudentHome";
 
 export default function EditGroup() {
   const paramID = useParams("");
@@ -83,7 +82,6 @@ export default function EditGroup() {
 
   return (
     <div>
-      <ResponsiveStudentHome />
       <Container sx={{ mt: 15 }}>
         <Paper elevation={7}>
           <Box sx={{ m: 5 }}>
@@ -99,7 +97,7 @@ export default function EditGroup() {
                 </Grid>
                 <TextField
                   label="Leader"
-                  variant="filled"
+                  variant="standard"
                   value={leader}
                   required
                   fullWidth
@@ -111,7 +109,7 @@ export default function EditGroup() {
                 <br />
                 <TextField
                   label="Member 1 Name"
-                  variant="filled"
+                  variant="standard"
                   value={member1}
                   required
                   fullWidth
@@ -123,7 +121,7 @@ export default function EditGroup() {
                 <br />
                 <TextField
                   label="Member 2 Name"
-                  variant="filled"
+                  variant="standard"
                   value={member2}
                   required
                   fullWidth
@@ -135,7 +133,7 @@ export default function EditGroup() {
                 <br />
                 <TextField
                   label="Member 3 Name"
-                  variant="filled"
+                  variant="standard"
                   value={member3}
                   required
                   fullWidth

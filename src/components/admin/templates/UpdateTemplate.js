@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import Loader from "../loader/Loader";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
-import ResponsiveAdminUpdateTemplate from "../../appBar/ResponsiveAdminUpdateTemplate";
 
 function UpdateTemplate() {
   const paramID = useParams("");
@@ -89,7 +88,6 @@ function UpdateTemplate() {
 
   return (
     <div>
-      <ResponsiveAdminUpdateTemplate />
       <Container sx={{ mt: 15 }}>
         <Paper elevation={7}>
           <Box sx={{ m: 5 }}>
@@ -109,7 +107,7 @@ function UpdateTemplate() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Title"
-                  variant="filled"
+                  variant="standard"
                   value={title}
                   required
                   fullWidth
@@ -121,7 +119,7 @@ function UpdateTemplate() {
                 <br />
                 <TextField
                   multiline
-                  variant="filled"
+                  variant="standard"
                   label="Description"
                   value={description}
                   required

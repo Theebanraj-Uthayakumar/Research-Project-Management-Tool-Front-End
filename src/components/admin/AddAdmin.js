@@ -6,7 +6,6 @@ import Loader from "./loader/Loader";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import ResponsiveAdminHome from "../appBar/ResponsiveAdminHome";
 function AddAdmin() {
   const [loading, setLoading] = useState(false);
 
@@ -66,7 +65,6 @@ function AddAdmin() {
 
   return (
     <div>
-      <ResponsiveAdminHome />
       <Container sx={{ mt: 15 }}>
         <Paper elevation={7}>
           <Box sx={{ m: 4 }}>
@@ -78,7 +76,7 @@ function AddAdmin() {
                 <Grid item md={6}></Grid>
                 <Box sx={{ pl: 5, pr: 5 }}>
                   <TextField
-                    variant="filled"
+                    variant="standard"
                     label="Admin ID"
                     value={idNumber}
                     required
@@ -91,7 +89,7 @@ function AddAdmin() {
                   <br />
 
                   <TextField
-                    variant="filled"
+                    variant="standard"
                     label="Password"
                     type="password"
                     value={password}
@@ -104,7 +102,7 @@ function AddAdmin() {
                   <br />
                   <br />
                   <TextField
-                    variant="filled"
+                    variant="standard"
                     label="Confirm Password"
                     type="password"
                     value={confirmPassword}

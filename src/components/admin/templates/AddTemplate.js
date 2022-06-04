@@ -6,7 +6,6 @@ import Loader from "../loader/Loader";
 import Typography from "@mui/material/Typography";
 import Input from "@mui/material/Input";
 import { useNavigate } from "react-router-dom";
-import ResponsiveAppBarTemplate from "../../appBar/ResponsiveAppBarTemplate";
 
 function AddTemplate() {
   const navigate = useNavigate();
@@ -67,8 +66,6 @@ function AddTemplate() {
 
   return (
     <div>
-      <ResponsiveAppBarTemplate />
-
       <br />
       <br />
       <br />
@@ -92,7 +89,7 @@ function AddTemplate() {
                   {/* <TextField
                     id="filled-hidden-label-normal"
                     label="Type"
-                    variant="filled"
+                    variant="standard"
                     value={type}
                     required
                     fullWidth
@@ -106,7 +103,7 @@ function AddTemplate() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Title"
-                  variant="filled"
+                  variant="standard"
                   value={title}
                   required
                   fullWidth
@@ -118,7 +115,7 @@ function AddTemplate() {
                 <br />
                 <TextField
                   multiline
-                  variant="filled"
+                  variant="standard"
                   label="Description"
                   value={description}
                   required

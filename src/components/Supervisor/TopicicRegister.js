@@ -17,7 +17,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import ResponsiveStudentHome from "../appBar/ResponsiveAppBarStudentHome";
 
 //import TopicView from /components/Supervisor/TopicView';
 
@@ -71,14 +70,10 @@ function TopicRegister() {
 
   return (
     <div>
-      <ResponsiveStudentHome />
       <br />
-      <br />
-      <br />
-      <br />
-      <h1 align="center">Topic Register</h1>
       <center>
-        <Card sx={{ m: 5, p: 5, width: 500 }} raised>
+        <Card sx={{ m: 5, p: 5, width: 700 }} raised>
+          <h1 align="center">Topic Register</h1>
           <CardContent>
             <center>
               <div className="App">
@@ -86,7 +81,7 @@ function TopicRegister() {
                   <Box
                     component="form"
                     sx={{
-                      "& > :not(style)": { m: 2, width: "52ch" },
+                      "& > :not(style)": { m: 2, width: 500 },
                     }}
                     noValidate
                     autoComplete="off"
@@ -95,7 +90,7 @@ function TopicRegister() {
                       required
                       id="name"
                       label="Name"
-                      variant="filled"
+                      variant="standard"
                       onChange={(e) => {
                         setName(e.target.value);
                       }}
@@ -105,7 +100,7 @@ function TopicRegister() {
                   <Box
                     component="form"
                     sx={{
-                      "& > :not(style)": { m: 1, width: "25ch" },
+                      "& > :not(style)": { m: 2, width: 500 },
                     }}
                     noValidate
                     autoComplete="off"
@@ -114,7 +109,7 @@ function TopicRegister() {
                       required
                       id="registerNumber"
                       label="Register Number"
-                      variant="filled"
+                      variant="standard"
                       onChange={(e) => {
                         setstudentId(e.target.value);
                       }}
@@ -124,7 +119,7 @@ function TopicRegister() {
                       required
                       id="groupId"
                       label="Group Id"
-                      variant="filled"
+                      variant="standard"
                       onChange={(e) => {
                         setGroupID(e.target.value);
                       }}
@@ -134,12 +129,12 @@ function TopicRegister() {
                   <Box
                     component="form"
                     sx={{
-                      "& > :not(style)": { m: 1, width: "25ch" },
+                      "& > :not(style)": { m: 2, width: 500 },
                     }}
                     noValidate
                     autoComplete="off"
                   >
-                    <FormControl required fullWidth>
+                    <FormControl required fullWidth variant="standard">
                       <InputLabel id="faculty-select-label">Faculty</InputLabel>
                       <Select
                         labelId="faculty-select-label"
@@ -160,7 +155,7 @@ function TopicRegister() {
                       </Select>
                     </FormControl>
 
-                    <FormControl required fullWidth>
+                    <FormControl required fullWidth variant="standard">
                       <InputLabel id="department-select-label">
                         Department
                       </InputLabel>
@@ -195,12 +190,12 @@ function TopicRegister() {
                   <Box
                     component="form"
                     sx={{
-                      "& > :not(style)": { m: 1, width: "52ch" },
+                      "& > :not(style)": { m: 2, width: 500 },
                     }}
                     noValidate
                     autoComplete="off"
                   >
-                    <FormControl required fullWidth>
+                    <FormControl required fullWidth variant="standard">
                       <InputLabel id="field-select-label">
                         Research Field
                       </InputLabel>
@@ -234,7 +229,7 @@ function TopicRegister() {
                   <Box
                     component="form"
                     sx={{
-                      "& > :not(style)": { m: 2, width: "52ch" },
+                      "& > :not(style)": { m: 2, width: 500 },
                     }}
                     noValidate
                     autoComplete="off"
@@ -243,14 +238,18 @@ function TopicRegister() {
                       required
                       id="topic"
                       label="Topic"
-                      variant="filled"
+                      variant="standard"
                       onChange={(e) => {
                         setTopic(e.target.value);
                       }}
                     />
                   </Box>
                   <center>
-                    <Button variant="contained" type="submit" style={{background: "#343a40"}}>
+                    <Button
+                      variant="contained"
+                      type="submit"
+                      style={{ background: "#343a40", width: 100 }}
+                    >
                       Submit
                     </Button>
                   </center>

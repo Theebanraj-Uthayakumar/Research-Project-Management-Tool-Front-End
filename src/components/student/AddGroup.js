@@ -8,7 +8,11 @@ import Input from "@mui/material/Input";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
+let studentID = null;
+
 function AddGroup() {
+  studentID = localStorage.getItem("userID");
+
   const [loading, setLoading] = useState(false);
   const [leader, setLeader] = useState("");
   const [member1, setMember1] = useState("");
@@ -20,9 +24,9 @@ function AddGroup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowText(false);
-    setLoading(true);
+
     const newGroup = {
+      studentID,
       leader,
       member1,
       member2,
@@ -35,53 +39,70 @@ function AddGroup() {
       .post("http://localhost:3000/rpmt/group/add/", newGroup)
       .then((res) => {
         console.log(res);
-        console.log("Group Added!!");
 
         setLeader("");
         setMember1("");
         setMember2("");
         setMember3("");
         form.reset();
-        setLoading(false);
-        setShowText(true);
 
-        setTimeout(() => {
-          Swal.fire({
-            title: "Group Added Successfully",
-            text: "You will be redirected to the home page",
-            icon: "success",
-            showCancelButton: false,
-            confirmButtonColor: "#3085d6",
-            confirmButtonText: "OK",
-          }).then((result) => {
-            if (result.value) {
-              navigate("/student");
-            }
-          });
-        }, 1000);
+        Swal.fire({
+          title: "Group Added Successfully",
+          text: "You will be redirected to the home page",
+          icon: "success",
+          showCancelButton: false,
+          confirmButtonColor: "#3085d6",
+          confirmButtonText: "OK",
+        }).then((result) => {
+          if (result.value) {
+            navigate("/student");
+          }
+        });
       })
       .catch((err) => {
-        alert(err);
+        Swal.fire({
+          title: "Group Alredy Exists",
+          // text: "You will be redirected to the home page",
+          icon: "warning",
+          showCancelButton: false,
+          confirmButtonColor: "#3085d6",
+          confirmButtonText: "OK",
+        }).then((result) => {
+          if (result.value) {
+            navigate("/student");
+          }
+        });
       });
   };
 
   return (
     <div>
-      <Container style={{height: 20, width: 600}}>
+      <Container style={{ width: 600 }}>
         <Paper elevation={7}>
           <Box sx={{ m: 5 }}>
+            <a href="/student/viewGroup" style={{ textDecoration: "none" }}>
+              <Button
+                variant="contained"
+                color="primary"
+                type="submit"
+                fullWidth
+                disabled={loading}
+                style={{ marginTop: "10px", background: "#343a40" }}
+              >
+                View Group
+              </Button>
+            </a>
+            <br />
             <br />
             <h2>Add Group Details</h2>
             <br />
 
             <Grid>
               <form id="form" onSubmit={handleSubmit}>
-                <br />
-                <br />
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Leader Name"
-                  variant="filled"
+                  variant="standard"
                   value={leader}
                   required
                   fullWidth
@@ -94,7 +115,7 @@ function AddGroup() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Member 1 Name"
-                  variant="filled"
+                  variant="standard"
                   value={member1}
                   required
                   fullWidth
@@ -107,7 +128,7 @@ function AddGroup() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Member 2 Name"
-                  variant="filled"
+                  variant="standard"
                   value={member2}
                   required
                   fullWidth
@@ -120,7 +141,7 @@ function AddGroup() {
                 <TextField
                   id="filled-hidden-label-normal"
                   label="Member 3 Name"
-                  variant="filled"
+                  variant="standard"
                   value={member3}
                   required
                   fullWidth
@@ -136,7 +157,7 @@ function AddGroup() {
                   type="submit"
                   fullWidth
                   disabled={loading}
-                  style={{ marginTop: "10px",background: "#343a40" }}
+                  style={{ marginTop: "10px", background: "#343a40" }}
                 >
                   Add Group Details
                 </Button>

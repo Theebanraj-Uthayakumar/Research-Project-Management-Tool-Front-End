@@ -3,7 +3,6 @@ import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import PersonIcon from "@mui/icons-material/Person";
 import Typography from "@mui/material/Typography";
@@ -13,9 +12,7 @@ import CardContent from "@mui/material/CardContent";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Stack from "@mui/material/Stack";
 import Swal from "sweetalert2";
-import ResponsiveAppBarLogin from "./appBar/ResponsiveAppBarLogin";
 
 function Login() {
   const [userID, setUserID] = useState("");
@@ -40,6 +37,7 @@ function Login() {
     if (data.user) {
       localStorage.setItem("token", data.user);
       localStorage.setItem("userID", data.userID);
+      localStorage.setItem("role", data.role);
 
       if (data.role === "student") {
         navigate("/student");
@@ -77,10 +75,9 @@ function Login() {
 
   return (
     <div>
-      <ResponsiveAppBarLogin />
       <Container sx={{ mt: 15 }}>
         <center>
-        <Card sx={{ minWidth: 400, m: 5, p: 2, maxWidth: 500 }} raised>
+          <Card sx={{ minWidth: 400, m: 5, p: 2, maxWidth: 500 }} raised>
             <CardContent>
               <form onSubmit={loginUser}>
                 <CssBaseline />
@@ -103,10 +100,10 @@ function Login() {
                       margin="normal"
                       required
                       fullWidth
-                      id="userID"
-                      value={userID}
+                      id="standard-basic"
                       label="Student ID or Staff ID or Admin ID"
-                      name="userID"
+                      variant="standard"
+                      value={userID}
                       autoFocus
                       onChange={(e) => {
                         setUserID(e.target.value);
@@ -119,6 +116,7 @@ function Login() {
                       value={password}
                       name="password"
                       label="Password"
+                      variant="standard"
                       type="password"
                       onChange={(e) => {
                         setPassword(e.target.value);
@@ -134,39 +132,39 @@ function Login() {
                     >
                       Sign In
                     </Button>
-                    <Grid container>
-                      {/* <Grid item xs justifyContent="flex-start"> */}
-                      <Stack
-                        direction="row"
-                        justifyContent="space-between"
-                        alignItems="flex-end"
-                        spacing={2}
-                        sx={{ mx: 10 }}
+
+                    <Link
+                      href="registerStudent"
+                      variant="body2"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Button
+                        fullWidth
+                        variant="contained"
+                        sx={{ mt: 1, mb: 1 }}
+                        style={{ background: "#343a40" }}
                       >
-                        {/* </Grid> */}
-                      </Stack>
-                    </Grid>
+                        Register as a Student
+                      </Button>
+                    </Link>
+
+                    <Link
+                      href="registerStaff"
+                      variant="body2"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Button
+                        fullWidth
+                        variant="contained"
+                        sx={{ mt: 1, mb: 2 }}
+                        style={{ background: "#343a40" }}
+                      >
+                        Register as a Staff
+                      </Button>
+                    </Link>
                   </Box>
                 </Box>
-                </form>
-                    <Link href="registerStudent" variant="body2"><Button
-                      fullWidth
-                      variant="contained"
-                      sx={{ mt: 1, mb: 1 }}
-                      style={{ background: "#343a40" }}
-                    >
-                       Register as a Student
-                    </Button></Link>
-
-                    <Link href="registerStaff" variant="body2"><Button
-                      fullWidth
-                      variant="contained"
-                      sx={{ mt: 1, mb: 2 }}
-                      style={{ background: "#343a40"}}
-                    >
-                       Register as a Staff
-                    </Button>
-                </Link>
+              </form>
             </CardContent>
           </Card>
         </center>

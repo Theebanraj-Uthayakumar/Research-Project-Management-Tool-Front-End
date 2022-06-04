@@ -15,7 +15,6 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Swal from "sweetalert2";
-import ResponsiveAdminHome from "../../../appBar/ResponsiveAdminHome";
 
 function ViewStaff() {
   const navigate = useNavigate();
@@ -75,7 +74,6 @@ function ViewStaff() {
   }, []);
   return (
     <div>
-      <ResponsiveAdminHome />
       <Container sx={{ mt: 15, p: 2 }}>
         <Typography variant="h4" component="div" gutterBottom>
           Registered Staff Members Details

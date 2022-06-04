@@ -7,16 +7,23 @@ import { CardActionArea, CardActions } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
-import ResponsiveAdminHome from "./appBar/ResponsiveSupervisorHome";
+
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 function SupervisorHome() {
   const navigate = useNavigate();
 
   return (
     <div>
-      <ResponsiveAdminHome />
       <Container>
-        <h1>Admin Home</h1>
+        <center>
+          <h1>Welcome to Supervisor Dashboard</h1>
+        </center>
 
         <Grid
           container
@@ -27,66 +34,50 @@ function SupervisorHome() {
           sx={{ mt: 3, p: 2, ml: 3 }}
         >
           <Card
-            sx={{ minWidth: 345, m: 3, maxWidth: 345, minHeight: 270 }}
-            raised
+            sx={{
+              minWidth: 345,
+              mr: 3,
+              maxWidth: 345,
+              minHeight: 270,
+            }}
+            onClick={() => {
+              navigate("/topicView");
+            }}
           >
-            <CardActionArea
-              onClick={() => {
-                navigate("/topicView");
-              }}
-            >
-              <center>
-                <Avatar
-                  alt="Item Image"
-                  src={require("./admin/images/registedTopic.jpg")}
-                  sx={{ width: 150, height: 150 }}
-                />
-              </center>
-              <CardContent style={{background: "#343a40" }}>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  style={{ fontWeight: 500, color: "#fff" }}
-                >
-                  View Registered Topics
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardMedia
+              component="img"
+              height="200"
+              image="https://images.unsplash.com/photo-1588618319344-424aa94f749e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1728&q=80"
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Registered Topics
+              </Typography>
+            </CardContent>
           </Card>
-
           <Card
-            sx={{ minWidth: 345, mr: 3, maxWidth: 345, minHeight: 270, mt: 3 }}
-            raised
+            sx={{
+              minWidth: 345,
+              mr: 3,
+              maxWidth: 345,
+              minHeight: 270,
+            }}
+            onClick={() => {
+              navigate("/student/viewResearch");
+            }}
           >
-            <CardActionArea
-              onClick={() => {
-                navigate("/student/viewResearch");
-              }}
-            >
-              <center>
-                <Avatar
-                  alt="Item Image"
-                  src={require("./admin/images/research1.jpg")}
-                  sx={{ width: 150, height: 150 }}
-                />
-              </center>
-              <CardContent style={{background: "#343a40" }}>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  style={{ fontWeight: 500, color: "#fff" }}
-                >
-                  View Research
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                 
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardMedia
+              component="img"
+              height="200"
+              image="https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg"
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                View Research
+              </Typography>
+            </CardContent>
           </Card>
         </Grid>
       </Container>

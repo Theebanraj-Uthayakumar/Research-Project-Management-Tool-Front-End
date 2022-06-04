@@ -24,7 +24,6 @@ import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import ResponsiveSupervisorHome from "../appBar/ResponsiveSupervisorHome";
 
 export default function ViewResearch() {
   const navigate = useNavigate();
@@ -70,7 +69,6 @@ export default function ViewResearch() {
   }, []);
   return (
     <div>
-      <ResponsiveSupervisorHome />
       <Container maxWidth="lg" sx={{ mt: 15, p: 2 }}>
         <Grid container spacing={3}>
           <Grid item xs={12}>

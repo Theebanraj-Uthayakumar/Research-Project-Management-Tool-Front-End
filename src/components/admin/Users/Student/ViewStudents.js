@@ -16,7 +16,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../usersStye.css";
 import Swal from "sweetalert2";
-import ResponsiveAdminHome from "../../../appBar/ResponsiveAdminHome";
 
 function ViewStudents() {
   const navigate = useNavigate();
@@ -77,7 +76,6 @@ function ViewStudents() {
   }, []);
   return (
     <div>
-      <ResponsiveAdminHome />
       <Container sx={{ mt: 15, p: 2 }}>
         <Typography variant="h4" component="div" gutterBottom>
           Registered Student Details

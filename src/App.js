@@ -12,7 +12,6 @@ import RegisterStaff from "./components/admin/Users/Staff/RegisterStaff";
 import Login from "./components/Login";
 import SupervisorHome from "./components/SupervisorHome";
 import StudentHome from "./components/student/StudentHome";
-import Footer from "./components/footer/Footer";
 import UpdateStaff from "./components/admin/Users/Staff/UpdateStaff";
 import UpdateStudent from "./components/admin/Users/Student/UpdateStudent";
 import AddAdmin from "./components/admin/AddAdmin";
@@ -28,13 +27,15 @@ import AddGroup from "./components/student/AddGroup";
 import ViewGroup from "./components/student/ViewGroup";
 import EditGroup from "./components/student/EditGroup";
 
+import NavBar from "./components/Layout/appBar/NavBar";
+import Footer from "./components/Layout/footer/Footer";
 
 export function App() {
   return (
     <div>
       <style>{"body { background-color: #f1f3f0; }"}</style>
       <BrowserRouter>
-        {/* routes */}
+        <NavBar />
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/templates/add" element={<FileUpload />}></Route>
@@ -65,23 +66,28 @@ export function App() {
           <Route path="/student" element={<StudentHome />}></Route>
           <Route path="/addAdmin" element={<AddAdmin />}></Route>
           <Route path="/panelMember" element={<PanelMemberHome />}></Route>
-
           <Route path="/topicRegister" element={<TopicRegister />}></Route>
           <Route path="/topicView" element={<TopicView />}></Route>
           <Route path="/status" element={<TopicStatus />}></Route>/
           <Route path="/supervisorHome" element={<SupervisorHome />}></Route>
-
-
           <Route path="/student/addResearch" element={<AddResearch />}></Route>
-          <Route path="/student/viewResearch" element={<ViewResearch />}></Route>
-          <Route path="/student/viewResearch/update/:id" element={<EditResearch />}></Route>
+          <Route
+            path="/student/viewResearch"
+            element={<ViewResearch />}
+          ></Route>
+          <Route
+            path="/student/viewResearch/update/:id"
+            element={<EditResearch />}
+          ></Route>
           <Route path="/student/addGroup" element={<AddGroup />}></Route>
           <Route path="/student/viewGroup" element={<ViewGroup />}></Route>
-          <Route path="/student/viewGroup/update/:id" element={<EditGroup />}></Route>
+          <Route
+            path="/student/viewGroup/update/:id"
+            element={<EditGroup />}
+          ></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
-
-      <Footer />
     </div>
   );
 }
