@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.0.0"
+  },
   "scripts": {
     "start": "parcel index.html",
     "dev": "concurrently \"npm start\" \"cd../backend && nodemon server.js\""
